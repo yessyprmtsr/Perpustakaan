@@ -2,7 +2,10 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-book"></i>
+              </div>
           <div class="sidebar-brand-text mx-3">PUSTAKA</div>
         </a>
 
@@ -12,37 +15,29 @@
           Menu
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
+        <!-- Nav Item - Pages Author Menu -->
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Authors</span>
-          </a>
-
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+           <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
             <i class="fas fa-fw fa-wrench"></i>
-            <span>Books</span>
-          </a>
-
+            <span>Author</span>
+           </a>
         </li>
 
+        <!-- Nav Item - Page Books Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-              <i class="fas fa-fw fa-wrench"></i>
-              <span>Borrows</span>
+            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
+             <i class="fas fa-fw fa-book"></i>
+             <span>Books</span>
             </a>
+         </li>
 
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-              <i class="fas fa-fw fa-wrench"></i>
-              <span>Users</span>
+         <!-- Nav Item - Page User Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
+             <i class="fas fa-fw fa-user"></i>
+             <span>User</span>
             </a>
-
-          </li>
+         </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">

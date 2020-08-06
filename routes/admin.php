@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 //dashboard admin
-Route::get('/', 'HomeController@index')->name('dashboard');
+Route::get('/', 'HomeController@author')->name('dashboard');
 //home author
 Route::get('/author','AuthorController@index')->name('author.index');
 //data author
@@ -16,3 +16,5 @@ Route::get('/author/{author}/edit', 'AuthorController@edit')->name('author.edit'
 Route::put('/author/{author}/update', 'AuthorController@update')->name('author.update');
 //delete
 Route::delete('/author/{author}', 'AuthorController@destroy')->name('author.destroy');
+//admin
+

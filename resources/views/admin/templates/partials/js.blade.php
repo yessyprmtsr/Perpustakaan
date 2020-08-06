@@ -18,3 +18,6 @@
 
 <!-- Page level custom scripts -->
 <script src="{{asset('/assets/js/demo/datatables-demo.js')}}"></script>
+
+<!-- Nyisipin baris kode yang diinginkan -->
+@stack('scripts')

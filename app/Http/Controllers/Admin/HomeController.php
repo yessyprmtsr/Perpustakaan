@@ -13,8 +13,8 @@ class HomeController extends Controller
         $jumlah_author = Author::all()->count();
        return view('admin.home')->with('jumlah_author', $jumlah_author);
     }
-    // public function books(){
-    //     //ngitung data
+    //  public function books(){
+
     //     $jumlah_author = Author::all()->count();
     //    return view('admin.home')->with('jumlah_author', $jumlah_author);
     // }

@@ -13,9 +13,7 @@ class DataController extends Controller
         $authors = Author::query();
         return datatables()->of($authors)
                             //nambah ruting ke edit
-                            ->addColumn('action', function(Author $author){
-                                return '<a href="'. route('admin.author.edit',$author).'" class="btn btn-outline-warning" > Edit</a>';
-                            })
+                            ->addColumn('action','admin.author.action')
                             ->toJson();
     }
 }

@@ -6,6 +6,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
+
     <!-- Sidebar -->
     @include('admin.templates.partials.sidebar')
     <!-- End of Sidebar -->
@@ -14,7 +15,9 @@
     <div id="content-wrapper" class="d-flex flex-column">
 
       <!-- Main Content -->
+
         @include('admin.templates.partials.content')
+        <!--Page breadcrumbs-->
       <!-- End of Main Content -->
 
       <!-- Footer -->

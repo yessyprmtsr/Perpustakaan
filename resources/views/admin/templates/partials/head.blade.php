@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Perpustakaan - Dashboard</title>
+<title>{{ $title ?? 'Perpustakaan'}}</title>
 
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" type="text/css" href="{{asset('/assets/vendor/fontawesome-free/css/all.min.css')}}" >

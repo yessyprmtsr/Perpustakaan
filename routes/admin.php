@@ -11,3 +11,6 @@ Route::get('/author/data','DataController@authors')->name('author.data');
 Route::get('/author/create','AuthorController@create')->name('author.create');
 //tambah author data
 Route::post('/author', 'AuthorController@store')->name('author.store');
+//edit author
+Route::get('/author/{author}/edit', 'AuthorController@edit')->name('author.edit');
+Route::put('/author/{author}/update', 'AuthorController@update')->name('author.update');

@@ -10,6 +10,7 @@
           <tr>
             <th>Id</th>
             <th>Nama</th>
+            <th>Action</th>
           </tr>
         </thead>
         {{-- <tbody>
@@ -31,7 +32,8 @@
                 ajax: '{{ route('admin.author.data') }}',
                 columns: [
                     { data: 'id'},
-                    { data: 'name'}
+                    { data: 'name'},
+                    { data: 'action'}
                 ]
             });
         });

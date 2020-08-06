@@ -2,8 +2,8 @@
 
 @section('content')
    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Author's Data</h1>
-   <a href="{{ route('admin.author.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Add Author Data</a>
+        <h1 class="h3 mb-0 text-gray-800">Books's Data</h1>
+   <a href="{{ route('admin.author.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Add Book Data</a>
    </div>
    <!--Nampilin alert save-->
    @if (session('success'))
@@ -22,7 +22,10 @@
         <thead>
           <tr>
             <th>Id</th>
-            <th>Nama</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Author</th>
+            <th>Cover</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -47,11 +50,15 @@
                 bDestroy: true,
                 processing: true,
                 serverSide: true,
-                ajax: '{{ route('admin.author.data') }}',
+                ajax: '{{ route('admin.book.data') }}',
                 columns: [
                     { data: 'DT_RowIndex', orderable: false, searchable: false},
-                    { data: 'name'},
-                    { data: 'action'}
+                    { data: 'title'},
+                    { data: 'description'},
+                    { data: 'author'},
+                    { data: 'cover'},
+                    { data: 'action'},
+
                 ]
             });
         });

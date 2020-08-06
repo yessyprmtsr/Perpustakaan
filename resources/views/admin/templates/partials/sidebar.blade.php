@@ -29,7 +29,7 @@
 
         <!-- Nav Item - Page Books Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
+            <a class="nav-link collapsed" href="{{ route('admin.book.index')}}" >
              <i class="fas fa-fw fa-book"></i>
              <span>Books</span>
             </a>

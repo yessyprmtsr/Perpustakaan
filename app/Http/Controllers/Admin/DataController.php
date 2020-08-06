@@ -16,4 +16,5 @@ class DataController extends Controller
                             ->addColumn('action','admin.author.action')
                             ->toJson();
     }
+
 }

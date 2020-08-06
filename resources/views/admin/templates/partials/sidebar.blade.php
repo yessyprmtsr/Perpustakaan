@@ -14,7 +14,11 @@
         <div class="sidebar-heading">
           Menu
         </div>
-
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ route('admin.dashboard')}}">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>Dashboard</span></a>
+          </li>
         <!-- Nav Item - Pages Author Menu -->
         <li class="nav-item">
            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >

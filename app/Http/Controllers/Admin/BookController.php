@@ -138,6 +138,8 @@ class BookController extends Controller
      */
     public function destroy(Books $book)
     {
-
+        $book->delete();
+        return redirect()->route('admin.book.index')
+                         ->withDanger('delete', 'Data has been deleted');
     }
 }

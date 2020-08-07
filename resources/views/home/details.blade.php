@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Perpustakaan</title>
+    <title>Apart &mdash; Colorlib Website Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{ asset('/assetuser/fonts/icomoon/style.css')}}">
@@ -18,24 +18,7 @@
     <link rel="stylesheet" href="{{ asset('/assetuser/css/fl-bigmug-line.css')}}">
     <link rel="stylesheet" href="{{ asset('/assetuser/css/aos.css')}}">
     <link rel="stylesheet" href="{{ asset('/assetuser/css/style.css')}}">
-    <style>
-        .pagination a {
-        color: black;
-        float: left;
-        padding: 8px 16px;
-        text-decoration: none;
-        transition: background-color .3s;
-        }
 
-        /* Style the active/current link */
-        .pagination a.active {
-        background-color: dodgerblue;
-        color: white;
-}
-
-/* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color: #ddd;}
-    </style>
 
   </head>
   <body>
@@ -47,15 +30,17 @@
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
-              <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>PUSTAKA<span class="text-primary">.</span></strong></a></h1>
+              <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>Apart<span class="text-primary">.</span></strong></a></h1>
             </div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">
 
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
-                    <li><a href="{{ url('/')}}">Home</a></li>
-                    <li class="active"><a href="about.html">Books</a></li>
+                    <li class="active">
+                    <a href="{{ url('/')}}">Home</a>
+                    </li>
+                    <li><a href="about.html">Books</a></li>
                     <li><a href="news.html">Login</a></li>
                     <li><a href="contact.html">Register</a></li>
                   </ul>
@@ -76,52 +61,34 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('{{asset('/assetuser/images/hero_bg_1.jpg')}}');"
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('images/hero_bg_1.jpg');"
     data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
-          <h1 class="text-white">Books Catalogue</h1>
-          <p>Membaca Adalah Jendela Ilmu Dunia</p>
+          <h1 class="text-white">News &amp; Events</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
       </div>
     </div>
   </div>
 
-    <div class="site-section">
-    <div class="container">
-      <div class="row">
-        @foreach ($books as $book)
-        <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
-        <a href="{{ url('/details')}}/{{$book->id}}" class="unit-9">
-              <img src="{{$book->getCover()}}">
-              <div class="unit-9-content">
-              <h2>{{Str::limit($book->title,10)}}</h2>
-                <span>{{$book->qty}}</span>
-                <!-- <span>with Wendy Matos</span> -->
-              </div>
-            </a>
-          </div>
-        @endforeach
 
+  <div class="container">
+    <div class="featured-property-half d-flex">
+        <img src="{{$books->getCover()}}" width="50%">
+      <div class="text">
+        <h2>Book Information</h2>
+        <p class="mb-5">{{$books->description}}</p>
+        <ul class="property-list-details mb-5">
+        <li class="text-black">Books Name: <strong class="text-black">{{$books->title}}</strong></li>
+          <li>Quantity: <strong>{{$books->qty}}</strong></li>
+          <li>Author: <strong>{{$books->author_id}}</strong></li>
+        </ul>
+        <p><a href="contact.html" class="btn btn-primary px-4 py-3">Borrow</a></p>
       </div>
-
     </div>
-
   </div>
-  {{-- //pagination --}}
-  {{$books->links()}}
-  {{-- <div class="pagination">
-    <a href="#">&laquo;</a>
-    <a class="active" href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
-    <a href="#">&raquo;</a>
-  </div> --}}
-
 
     <footer class="site-footer bg-light">
       <div class="container">

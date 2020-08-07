@@ -3,23 +3,23 @@
 <div class="container">
     <h2>Book Catalogue</h2>
     <div class="row">
-      @for ($i = 0; $i < 10; $i++)
-      <div class="col s12 m6">
-          <div class="card horizontal">
-            <div class="card-image">
-              <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+        @foreach ($books as $book)
+        <div class="col s12 m6">
+            <div class="card horizontal">
+              <div class="card-image">
+              <img src="{{$book ->getCover()}}">
               </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>{{Str::limit($book ->title,10)}}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
               </div>
             </div>
-          </div>
-       </div>
-      @endfor
+         </div>
+        @endforeach
       <ul class="pagination center">
           <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
           <li class="active"><a href="#!">1</a></li>

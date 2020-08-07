@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', 'Frontend\BookController@index');
+Route::get('/books','Frontend\BookController@book')->name('book');
+Route::get('/details/{id}','Frontend\BookController@detail')->name('detail');
 Route::get('/catalog', function () {
     return view('home.book');
 });

@@ -23,7 +23,17 @@
     <link rel="stylesheet" href="{{ asset('/assetuser/css/aos.css')}}">
 
     <link rel="stylesheet" href="{{ asset('/assetuser/css/style.css')}}">
-
+    <style>
+/*
+    .site-navbar
+{
+    background-color: grey;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+} */
+    </style>
   </head>
   <body>
 
@@ -31,7 +41,7 @@
 
   <div class="site-wrap">
 
-    <div class="site-navbar mt-4">
+    <div class="site-navbar">
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
@@ -46,7 +56,7 @@
                   <li class="active">
                   <a href="{{ url('/')}}">Home</a>
                   </li>
-                  <li><a href="{{url('/catalog')}}">Books</a></li>
+                  <li><a href="{{ route('book')}}">Books</a></li>
                   <li><a href="news.html">Login</a></li>
                   <li><a href="contact.html">Register</a></li>
                 </ul>

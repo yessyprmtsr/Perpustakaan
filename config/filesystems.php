@@ -45,7 +45,9 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            // 'root' => storage_path('app'),
+            //langsung masuk ke public path buat gambar
+            'root' => public_path(),
         ],
 
         'public' => [

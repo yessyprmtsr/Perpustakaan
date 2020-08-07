@@ -50,9 +50,11 @@ class BookController extends Controller
             'cover' => 'file|image',
             'qty' => 'required'
         ]);
+        //kalau gaada cover
+        $cover = null;
         //simpan gambar
         if($request->hasFile('cover')){
-           $cover = $request->file('cover')->store('/assets/covers');
+           $cover = $request->file('cover')->store('public/assets/covers');
         }
         //untuk fungsi create
         Books::create([

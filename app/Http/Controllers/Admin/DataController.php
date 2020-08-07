@@ -29,7 +29,7 @@ class DataController extends Controller
                             })
                             //nambahin cover image
                             ->editColumn('cover', function(Books $model){
-                                return '<img src="'.$model->cover.'" height="200px">';
+                                return '<img src="'.$model->getCover().'" height="100px">';
                             })
                             //nambah ruting ke edit
                             ->addIndexColumn()

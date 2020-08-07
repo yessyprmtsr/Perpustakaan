@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Author;
 use App\Books;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -22,6 +23,7 @@ class BookController extends Controller
     }
     public function detail($id)
     {
+
         $books = Books::where('id', $id)->first();
         return view('home\details',[
             'books' => $books,

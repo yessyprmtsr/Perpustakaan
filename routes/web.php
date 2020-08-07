@@ -25,7 +25,10 @@ Route::get('/catalog', function () {
 Route::get('/user', function () {
     return view('user.index');
 });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Auth::routes(['verify' => true]);
 
-Route::get('\home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');

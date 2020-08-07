@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Frontend\BookController@index');
 Route::get('/books','Frontend\BookController@book')->name('book');
-Route::get('/details/{id}','Frontend\BookController@detail')->name('detail');
+Route::get('/details/{book}','Frontend\BookController@detail')->name('detail');
+
+Route::post('/details/{book}/borrow','Frontend\BookController@borrow')->name('book.borrow')->middleware('auth');
 Route::get('/catalog', function () {
     return view('home.book');
 });

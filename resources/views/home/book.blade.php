@@ -24,7 +24,7 @@
       <div class="row">
         @foreach ($books as $book)
         <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
-        <a href="{{ url('/details')}}/{{$book->id}}" class="unit-9">
+        <a href="{{ route('detail',$book)}}/{{$book->$books}}" class="unit-9">
               <img src="{{$book->getCover()}}">
               <div class="unit-9-content">
               <h2 style="color: black">{{Str::limit($book->title,15)}}</h2>

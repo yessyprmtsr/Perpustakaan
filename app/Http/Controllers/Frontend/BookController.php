@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Author;
 use App\Books;
+use App\BorrowHistory;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -21,12 +23,23 @@ class BookController extends Controller
             'books' => $books,
         ]);
     }
-    public function detail($id)
+    public function detail($books)
     {
 
-        $books = Books::where('id', $id)->first();
+        $books = Books::where('id', $books)->first();
         return view('home\details',[
             'books' => $books,
         ]);
+    }
+    public function borrow(Books $book)
+    {
+        BorrowHistory::create([
+            'user_id' => auth()->id(),
+            'book_id' => $book->id,
+        ]);
+        return redirect()->route('book');
+    //    $user = auth()->user();
+    //    $user->borrow()->attach($books);
+    //     return 'Ok';
     }
 }

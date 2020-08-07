@@ -24,4 +24,8 @@ class Books extends Model
         // jika tidak ada cover
         return 'https://via.placeholder.com/728x90.png?text=No+Cover';
     }
+    public function borrowed()
+    {
+        return $this->belongsToMany(User::class, 'borrow_history');
+    }
 }

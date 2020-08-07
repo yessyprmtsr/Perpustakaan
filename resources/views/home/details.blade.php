@@ -31,8 +31,11 @@
           <li>Quantity: <strong>{{$books->qty}}</strong></li>
           <li>Author: <strong>{{$books->author->name}}</strong></li>
         </ul>
-        <p><a href="#" class="btn btn-primary px-4 py-3">Borrow</a></p>
-      </div>
+        <form action="{{ route('book.borrow', $books)}}" method="post">
+        @csrf
+        <input type="submit" value="Borrow" class="btn btn-primary px-4 py-3">
+        </form>
+    </div>
     </div>
   </div>
 
@@ -46,7 +49,9 @@
         <div class="row">
             @foreach ($books->author->books->shuffle()->take(4) as $book)
             <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+                <a href="{{ route('detail',$book)}}/{{$book->$books}}" class="unit-9">
                   <img src="{{$book->getCover()}}" width="200px">
+                </a>
                   <div class="unit-9-content">
                   <h2 style="color: black">{{Str::limit($book->title,15)}}</h2>
                     <span>Author: {{Str::limit($book->author->name, 13)}}</span>

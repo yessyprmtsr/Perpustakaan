@@ -35,6 +35,30 @@
       </div>
     </div>
   </div>
+
+  <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+          <h2 class="mb-5">Another Books From {{$books->author->name}}</h2>
+          </div>
+        </div>
+        <div class="row">
+            @foreach ($books->author->books->shuffle()->take(4) as $book)
+            <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+                  <img src="{{$book->getCover()}}" width="200px">
+                  <div class="unit-9-content">
+                  <h2 style="color: black">{{Str::limit($book->title,15)}}</h2>
+                    <span>Author: {{Str::limit($book->author->name, 13)}}</span>
+                    <!-- <span>with Wendy Matos</span> -->
+                  </div>
+                </a>
+              </div>
+            @endforeach
+        </div>
+        </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
       <div class="row">

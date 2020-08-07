@@ -13,9 +13,7 @@
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
-                  <li class="active">
-                  <a href="{{ url('/')}}">Home</a>
-                  </li>
+                  <li><a href="{{ url('/')}}">Home</a></li>
                   <li><a href="{{ route('book')}}">Books</a></li>
                   <li><a href="{{ route('login')}}">Login</a></li>
                   <li><a href="{{ route('register')}}">Register</a></li>

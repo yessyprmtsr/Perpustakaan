@@ -7,12 +7,12 @@
         </div>
 
         <div class="box-body">
-            <form action="{{ route('admin.author.store')}}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('admin.book.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group @error('name') has-error @enderror ">
+                <div class="form-group @error('title') has-error @enderror ">
                     <label for=""> Title</label>
                     <input type="text" name="title" class="form-control" placeholder="Enter book's title">
-                    @error('name')
+                    @error('title')
                     <span class="help-block">{{$message}}</span>
                     @enderror
                 </div>

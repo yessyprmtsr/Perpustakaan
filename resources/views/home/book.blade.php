@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('home.partials.head')
+
   <body>
 
 
     @include('home.partials.navbar')
 
     @include('home.partials.cover')
+
     <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('{{asset('/assetuser/images/hero_bg_1.jpg')}}');"
     data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
     <div class="container">
@@ -18,7 +20,8 @@
       </div>
     </div>
   </div>
-
+  <br>
+  @include('home.partials.toast')
     <div class="site-section">
     <div class="container">
       <div class="row">

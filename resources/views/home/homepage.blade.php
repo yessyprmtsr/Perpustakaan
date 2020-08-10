@@ -215,5 +215,6 @@
   </div>
 
   @include('home.partials.script')
+
   </body>
 </html>

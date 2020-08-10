@@ -28,6 +28,7 @@
         <p class="mb-5">{{$books->description}}</p>
         <ul class="property-list-details mb-5">
         <li class="text-black">Books Name: <strong class="text-black">{{$books->title}}</strong></li>
+          <li>Books ID: <strong>{{$books->id}}</strong></li>
           <li>Quantity: <strong>{{$books->qty}}</strong></li>
           <li>Author: <strong>{{$books->author->name}}</strong></li>
         </ul>

@@ -37,7 +37,7 @@ class BookController extends Controller
             'user_id' => auth()->id(),
             'book_id' => $book->id,
         ]);
-        return redirect()->route('book');
+        return redirect()->route('book')->with('toast','You borrowed the book');
     //    $user = auth()->user();
     //    $user->borrow()->attach($books);
     //     return 'Ok';

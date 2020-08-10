@@ -16,9 +16,20 @@
           </tr>
         </thead>
         <tbody>
+            @php
+            $page = 1;
+            if(request()->has('page')){
+                $page = request('page');
+            }
+
+            // 10 nilai dari pagination
+            // dikali dengan page yang default 1
+
+            $no = (10 * $page) - (10 - 1);
+        @endphp
           @foreach ($users as $user)
           <tr>
-            <td></td>
+            <td>{{$no++}}</td>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
             <td>{{$user->borrow_count}}</td>

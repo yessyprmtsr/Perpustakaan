@@ -30,7 +30,7 @@ Route::get('/user', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
-
+Route::get('/search','Frontend\BookController@search')->name('search');
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('products')->middleware('verified');

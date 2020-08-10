@@ -8,7 +8,7 @@ use App\BorrowHistory;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 
 class BookController extends Controller
 {
@@ -53,5 +53,12 @@ class BookController extends Controller
     //    $user = auth()->user();
     //    $user->borrow()->attach($books);
     //     return 'Ok';
+    }
+    public function search(Request $request){
+        $search = $request->get('search');
+        $books =  DB::table('books')->where('title','like','%'.$search.'%')->paginate(12);
+        return view('home.book',[
+            'books' => $books,
+        ]);
     }
 }

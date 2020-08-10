@@ -16,7 +16,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function borrow()
     {
         //relasi many to many ke book
-        return $this->belongsToMany(Book::class, 'borrow_history')->where('returned_at', null)->withTimestamps();;
+        return $this->belongsToMany(Book::class, 'borrow_history')
+                    ->where('returned_at', null)
+                    ->withTimestamps();
     }
     /**
      * The attributes that are mass assignable.

@@ -38,8 +38,6 @@
 
         </div>
   <br>
-
-
     @include('home.partials.script')
   </body>
 </html>

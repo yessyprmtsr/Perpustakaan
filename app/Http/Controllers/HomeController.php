@@ -27,7 +27,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $books = BorrowHistory::paginate(12);
+
         $books = auth()->user()->borrow;
 
         return view('home.mybook',[

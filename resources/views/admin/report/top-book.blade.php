@@ -18,9 +18,21 @@
           </tr>
         </thead>
         <tbody>
+            {{-- membuat nomor diluar tabel --}}
+            @php
+                $page = 1;
+                if(request()->has('page')){
+                    $page = request('page');
+                }
+
+                // 10 nilai dari pagination
+                // dikali dengan page yang default 1
+
+                $no = (10 * $page) - (10 - 1);
+            @endphp
           @foreach ($books as $book)
           <tr>
-            <td></td>
+            <td>{{$no++}}</td>
             <td>{{$book->title}}</td>
             <td>{{$book->description}}</td>
             <td>{{$book->qty}}</td>

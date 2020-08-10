@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Author;
-use App\Books;
+use App\Book;
 use App\BorrowHistory;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+
 
 class BookController extends Controller
 {
@@ -17,7 +18,7 @@ class BookController extends Controller
     public function book()
     {
 
-        $books = Books::paginate(12);
+        $books = Book::paginate(12);
 
         return view('home.book',[
             'books' => $books,
@@ -26,18 +27,21 @@ class BookController extends Controller
     public function detail($books)
     {
 
-        $books = Books::where('id', $books)->first();
+        $books = Book::where('id', $books)->first();
         return view('home\details',[
             'books' => $books,
         ]);
     }
-    public function borrow(Books $book)
+    public function borrow(Book $book)
     {
         BorrowHistory::create([
             'user_id' => auth()->id(),
             'book_id' => $book->id,
         ]);
-        // if($user->borrow()->where('books.id', $book->id)->count() > 0){
+        // $user = auth()->user();
+        // $user->borrow()->attach($book);
+
+        //  if($user->borrow()->where('books.id', $book->id)->count() > 0){
         //     return redirect()->back()->with('toast','You already borrow this book');
         // }
 

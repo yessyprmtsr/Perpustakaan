@@ -12,6 +12,6 @@ class Author extends Model
     public $timestamps= false;
     //relasi ke books
     public function books(){
-        return $this->hasMany(Books::class);
+        return $this->hasMany(Book::class);
     }
 }

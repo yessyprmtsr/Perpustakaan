@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Author;
-use App\Books;
+use App\Book;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -58,7 +58,7 @@ class BookController extends Controller
            $cover = $request->file('cover')->store('public/assets/covers');
         }
         //untuk fungsi create
-        Books::create([
+        Book::create([
             'title' => $request->title,
             'description' => $request->description,
             'author_id' => $request->author_id,
@@ -85,7 +85,7 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Books $book)
+    public function edit(Book $book)
     {
         return view('admin.book.edit',[
             'title' => 'Perpustakaan|Ubah data buku',
@@ -101,7 +101,7 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Books $book)
+    public function update(Request $request, Book $book)
     {
         //validasi
         $this->validate($request,[
@@ -136,7 +136,7 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Books $book)
+    public function destroy(Book $book)
     {
         $book->delete();
         return redirect()->route('admin.book.index')

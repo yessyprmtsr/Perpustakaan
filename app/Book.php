@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Books extends Model
+class Book extends Model
 {
     //menangani problem mass fillable
     protected $guarded = [];
@@ -12,6 +12,10 @@ class Books extends Model
     public function author(){
 
         return $this->belongsTo(Author::class);
+    }
+    public function borrowed()
+    {
+        return $this->belongsToMany(User::class, 'borrow_history');
     }
     //menangani asset memunculkan gambar
     public function getCover(){
@@ -24,8 +28,5 @@ class Books extends Model
         // jika tidak ada cover
         return 'https://via.placeholder.com/728x90.png?text=No+Cover';
     }
-    public function borrowed()
-    {
-        return $this->belongsToMany(User::class, 'borrow_history');
-    }
+
 }

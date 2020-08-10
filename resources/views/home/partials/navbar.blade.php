@@ -15,31 +15,34 @@
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li><a href="{{ url('/')}}">Home</a></li>
                   <li><a href="{{ route('book')}}">Books</a></li>
-                  {{-- //yang belum login --}}
                   @guest
                   <li><a href="{{ route('login')}}">Login</a></li>
                   <li><a href="{{ route('register')}}">Register</a></li>
                   @else
-                  <li class="dropdown" id=""dropdown1>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{ auth()->user()->name}}
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu" data-target="dropdown1">
-                    <li><a href="{{ route('logout') }}"
+                <li><a href="{{ route('products')}}">My Product</a></li>
+                  <li class="has-children">
+                    <a href="#">{{ auth()->user()->name}}</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
                                     Logout
-                                    </a>
-                    </li>
+                                    </a></li>
                     </ul>
+                  </li>
+                  @endguest
+
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
                   </li>
 
-                  @endguest
-
-
                 </ul>
+
+
+
+
+
               </nav>
             </div>
 

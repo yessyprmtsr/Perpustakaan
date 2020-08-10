@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Books;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $book = auth()->user()->borrow;
+        dd($book);
+        return view('home.mybook');
     }
 }

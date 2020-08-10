@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('home.partials.head')
-<body>
-{{-- navbar --}}
-@include('home.partials.navbar')
-@include('home.partials.cover')
+
+  <body>
+
+
+    @include('home.partials.navbar')
+
+    @include('home.partials.cover')
+
 
 <div class="site-blocks-cover overlay" style="background-image: url('{{ asset('/assetuser/images/hero_bg_2.jpg')}}');" data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
       <div class="container">

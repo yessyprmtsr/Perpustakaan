@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Author;
-use App\Books;
+use App\Book;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -21,14 +21,14 @@ class DataController extends Controller
     //boooks
     public function books(){
         //passing parameter
-        $books = Books::orderBy('title','ASC');
+        $books = Book::orderBy('title','ASC');
         return datatables()->of($books)
                             //nambahin author kolom
-                            ->addColumn('author', function(Books $model){
+                            ->addColumn('author', function(Book $model){
                                 return $model->author->name;
                             })
                             //nambahin cover image
-                            ->editColumn('cover', function(Books $model){
+                            ->editColumn('cover', function(Book $model){
                                 return '<img src="'.$model->getCover().'" height="100px">';
                             })
                             //nambah ruting ke edit

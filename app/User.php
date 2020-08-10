@@ -9,8 +9,15 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
+
+
     use Notifiable, HasRoles;
 
+    public function borrow()
+    {
+        //relasi many to many ke book
+        return $this->belongsToMany(Book::class, 'borrow_history');
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -37,10 +44,5 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function borrow()
-    {
-        //relasi many to many ke book
-        return $this->belongsToMany(Books::class, 'borrow_history');
-    }
 
 }

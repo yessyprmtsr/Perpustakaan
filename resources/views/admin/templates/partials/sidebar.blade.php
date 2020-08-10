@@ -49,7 +49,12 @@
              <span>Borrowing Book</span>
             </a>
          </li>
-
+         <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('admin.report.top-book')}}" >
+             <i class="fas fa-fw fa-file"></i>
+             <span>Library Reports</span>
+            </a>
+         </li>
         <!-- Divider -->
 
 

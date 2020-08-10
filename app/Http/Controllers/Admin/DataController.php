@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Author;
 use App\Book;
+use App\BorrowHistory;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -36,6 +37,20 @@ class DataController extends Controller
                             ->addColumn('action','admin.book.action')
                             //biar image keluar
                             ->rawColumns(['cover','action'])
+                            ->toJson();
+    }
+    public function borrows(){
+        //untuk nampilin peminjaman dari user
+        $borrows = BorrowHistory::latest();
+        return datatables()->of($borrows)
+                            ->addColumn('user', function(BorrowHistory $model){
+                                        return $model->user->name;
+                                    })
+                            ->addColumn('book_title', function(BorrowHistory $model){
+                                        return $model->book->title;
+                                    })
+                            ->addIndexColumn()
+                            ->addColumn('action','admin.borrow.action')
                             ->toJson();
     }
 

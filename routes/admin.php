@@ -25,3 +25,6 @@ Route::resource('author', 'AuthorController');
 Route::get('/book/data','DataController@books')->name('book.data');
 //route crud book
 Route::resource('book', 'BookController');
+//route borrow admin
+Route::get('/borrow','BorrowController@index')->name('borrow.index');
+Route::get('/borrow/data', 'DataController@borrows')->name('borrow.data');

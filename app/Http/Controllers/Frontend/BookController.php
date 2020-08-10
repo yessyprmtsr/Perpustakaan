@@ -37,9 +37,13 @@ class BookController extends Controller
             'user_id' => auth()->id(),
             'book_id' => $book->id,
         ]);
+        // if($user->borrow()->where('books.id', $book->id)->count() > 0){
+        //     return redirect()->back()->with('toast','You already borrow this book');
+        // }
+
         //ngurangin stok buku
         $book->decrement('qty');
-        return redirect()->route('book')->with('toast','You borrowed the book');
+        return redirect()->route('book')->with('toast','You borrowed the book: ' . $book->title);
     //    $user = auth()->user();
     //    $user->borrow()->attach($books);
     //     return 'Ok';

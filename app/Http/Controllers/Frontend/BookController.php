@@ -21,6 +21,7 @@ class BookController extends Controller
         $books = Book::paginate(12);
 
         return view('home.book',[
+            'title' => 'Homepage | Books',
             'books' => $books,
         ]);
     }
@@ -29,6 +30,7 @@ class BookController extends Controller
 
         $books = Book::where('id', $books)->first();
         return view('home\details',[
+            'title' => 'Homepage | Details Book',
             'books' => $books,
         ]);
     }

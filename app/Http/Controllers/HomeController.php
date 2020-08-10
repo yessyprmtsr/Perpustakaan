@@ -26,6 +26,7 @@ class HomeController extends Controller
     {
         $books = auth()->user()->borrow;
         return view('home.mybook',[
+            'title' => 'Homepage | My Book',
             'books' => $books,
         ]);
     }

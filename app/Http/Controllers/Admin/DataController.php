@@ -41,7 +41,9 @@ class DataController extends Controller
     }
     public function borrows(){
         //untuk nampilin peminjaman dari user
-        $borrows = BorrowHistory::latest();
+        // $borrows = BorrowHistory::latest();
+        //untuk nampilin hanya buku yang di pinjam dari user
+         $borrows = BorrowHistory::where('returned_at',null)->latest();
         return datatables()->of($borrows)
                             ->addColumn('user', function(BorrowHistory $model){
                                         return $model->user->name;

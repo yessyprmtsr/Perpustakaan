@@ -19,10 +19,18 @@
               <i class="fas fa-fw fa-tachometer-alt"></i>
               <span>Dashboard</span></a>
           </li>
+
+                <!-- Nav Item - Page User Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
+            <i class="fas fa-fw fa-user"></i>
+            <span>User</span>
+            </a>
+            </li>
         <!-- Nav Item - Pages Author Menu -->
         <li class="nav-item">
            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
-            <i class="fas fa-fw fa-wrench"></i>
+            <i class="fas fa-fw fa-pen"></i>
             <span>Author</span>
            </a>
         </li>
@@ -34,17 +42,16 @@
              <span>Books</span>
             </a>
          </li>
-
-         <!-- Nav Item - Page User Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
-             <i class="fas fa-fw fa-user"></i>
-             <span>User</span>
+         <hr class="sidebar-divider">
+         <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('admin.borrow.index')}}" >
+             <i class="fas fa-fw fa-download"></i>
+             <span>Borrowing Book</span>
             </a>
          </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider">
+
 
         <!-- Heading -->
 

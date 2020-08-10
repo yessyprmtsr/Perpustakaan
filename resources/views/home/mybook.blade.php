@@ -14,30 +14,28 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
           <h1 class="text-white">My Books</h1>
-          <p>Membaca Adalah Jendela Ilmu Dunia</p>
         </div>
       </div>
     </div>
     <div class="site-section">
         <div class="container">
           <div class="row">
-            @foreach ($book as $books)
+            @foreach ($books as $book)
             <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
-            <a href="{{ route('detail',$books)}}/{{$book->$books}}" class="unit-9">
-                  <img src="{{$books->getCover()}}">
+                  <img src="{{$book->getCover()}}">
                   <div class="unit-9-content">
-                  <h2 style="color: black">{{Str::limit($books->title,15)}}</h2>
-                    <span>Author: {{Str::limit($books->author->name, 13)}}</span>
+                  <h2 style="color: black">{{Str::limit($book->title,15)}}</h2>
+                    <span>Author: {{Str::limit($book->author->name, 13)}}</span>
+                    <br>
+                    <span>Description: {{Str::limit($book->description, 20)}}</span>
                     <!-- <span>with Wendy Matos</span> -->
                   </div>
-                </a>
               </div>
             @endforeach
 
           </div>
 
         </div>
-  </div>
   <br>
     @include('home.partials.script')
   </body>

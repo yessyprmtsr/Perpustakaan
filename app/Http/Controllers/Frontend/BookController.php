@@ -47,7 +47,7 @@ class BookController extends Controller
 
         //ngurangin stok buku
         $book->decrement('qty');
-        return redirect()->route('book')->with('toast','You borrowed the book: ' . $book->title);
+        return redirect()->route('products')->with('toast','You borrowed the book: ' . $book->title);
     //    $user = auth()->user();
     //    $user->borrow()->attach($books);
     //     return 'Ok';

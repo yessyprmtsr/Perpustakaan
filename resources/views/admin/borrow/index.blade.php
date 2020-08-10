@@ -2,8 +2,8 @@
 
 @section('content')
    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Author's Data</h1>
-   <a href="{{ route('admin.author.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Add Author Data</a>
+        <h1 class="h3 mb-0 text-gray-800">Borrow's Data</h1>
+
    </div>
    <!--Nampilin alert save-->
    @if (session('success'))
@@ -34,10 +34,10 @@
           </tr>
         </tbody> --}}
       </table>
-      <form action="" method="POST" id="deleteForm">
+      <form action="" method="POST" id="returnForm">
         @csrf
-        @method("DELETE")
-        <input type="submit" class="btn btn-outline-danger" value="Delete" style="display: none">
+        @method("PUT")
+        <input type="submit" class="btn btn-outline-danger" value="Return" style="display: none">
     </form>
 @endsection
 <!-- Paggil stack booking -->

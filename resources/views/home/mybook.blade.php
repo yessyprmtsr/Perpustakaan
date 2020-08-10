@@ -17,6 +17,7 @@
         </div>
       </div>
     </div>
+    @include('home.partials.toast')
     <div class="site-section">
         <div class="container">
           <div class="row">

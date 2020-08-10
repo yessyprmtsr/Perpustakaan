@@ -16,17 +16,17 @@
           </tr>
         </thead>
         <tbody>
-          @foreach ($books as $book)
+          @foreach ($users as $user)
           <tr>
             <td></td>
-            <td>{{$book->name}}</td>
-            <td>{{$book->email}}</td>
-            <td>{{$book->borrowed_count}}</td>
-            <td>{{$book->created_at->diffForHumans()}}</td>
+            <td>{{$user->name}}</td>
+            <td>{{$user->email}}</td>
+            <td>{{$user->borrow_count}}</td>
+            <td>{{$user->created_at->diffForHumans()}}</td>
           </tr>
           @endforeach
         </tbody>
       </table>
-      {{$books->links()}}
+      {{$users->links()}}
 @endsection
 <!-- Paggil stack booking -->

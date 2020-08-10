@@ -32,4 +32,4 @@ Route::put('borrow/{borrowHistory}/return','BorrowController@returnBook')->name(
 Route::get('/borrow/data', 'DataController@borrows')->name('borrow.data');
 //route report
 Route::get('report/top-book','ReportController@topBook')->name('report.top-book');
-Route::get('report/top-book','ReportController@topBook')->name('report.top-book');
+Route::get('report/top-user','ReportController@topUser')->name('report.top-user');

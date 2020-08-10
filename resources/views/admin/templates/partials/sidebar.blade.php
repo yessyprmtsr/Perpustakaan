@@ -22,7 +22,7 @@
 
                 <!-- Nav Item - Page User Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('admin.author.index')}}" >
+            <a class="nav-link collapsed" href="{{ route('admin.report.top-user')}}" >
             <i class="fas fa-fw fa-user"></i>
             <span>User</span>
             </a>

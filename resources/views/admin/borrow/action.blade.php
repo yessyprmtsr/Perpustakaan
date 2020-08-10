@@ -1,5 +1,5 @@
 
-<button href="{{ route('admin.borrow.return',$model)}}" class="btn btn-outline-danger" id="return" > Pengembalian</button>
+<button href="{{ route('admin.borrow.return',$model)}}" class="btn btn-outline-danger" id="return" > Return Book</button>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <!--Hapus-->
 <script>

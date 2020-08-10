@@ -1,6 +1,7 @@
 
 
 <a href="{{ route('admin.book.edit',$model)}}" class="btn btn-outline-warning" > Edit</a>
+<hr>
 <button href="{{ route('admin.book.destroy',$model)}}" class="btn btn-outline-danger" id="delete" > Delete</button>
 <!--Alert Delete-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

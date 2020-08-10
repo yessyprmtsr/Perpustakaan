@@ -24,6 +24,7 @@
             <th>Id</th>
             <th>Nama</th>
             <th>Book Title</th>
+            <th>Borrow At</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -53,6 +54,7 @@
                     { data: 'DT_RowIndex', orderable: false, searchable: false},
                     { data: 'user'},
                     { data: 'book_title'},
+                    { data: 'created_at'},
                     { data: 'action'}
                 ]
             });

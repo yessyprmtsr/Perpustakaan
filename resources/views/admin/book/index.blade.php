@@ -25,6 +25,7 @@
             <th>Title</th>
             <th>Description</th>
             <th>Author</th>
+            <th>Quantity</th>
             <th>Cover</th>
             <th>Action</th>
           </tr>
@@ -56,6 +57,7 @@
                     { data: 'title'},
                     { data: 'description'},
                     { data: 'author'},
+                    { data: 'qty'},
                     { data: 'cover'},
                     { data: 'action'},
 

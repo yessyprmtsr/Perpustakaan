@@ -19,7 +19,6 @@
                   <li><a href="{{ route('login')}}">Login</a></li>
                   <li><a href="{{ route('register')}}">Register</a></li>
                   @else
-                <li><a href="{{ route('products')}}">My Product</a></li>
                   <li class="has-children">
                     <a href="#">{{ auth()->user()->name}}</a>
                     <ul class="dropdown arrow-top">
@@ -27,9 +26,12 @@
                         onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
                                     Logout
-                                    </a></li>
+                                    </a>
+                        </li>
                     </ul>
                   </li>
+                <li><a href="{{ route('products')}}">My History Book</a></li>
+
                   @endguest
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

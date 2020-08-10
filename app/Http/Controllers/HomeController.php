@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
 use App\Books;
+use App\BorrowHistory;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        $books = BorrowHistory::paginate(12);
         $books = auth()->user()->borrow;
+
         return view('home.mybook',[
             'title' => 'Homepage | My Book',
             'books' => $books,

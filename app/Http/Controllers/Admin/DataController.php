@@ -22,7 +22,9 @@ class DataController extends Controller
     //boooks
     public function books(){
         //passing parameter
-        $books = Book::orderBy('title','ASC');
+        $books = Book::orderBy('title','ASC')->get();
+        //menggunakan lazy load
+        $books->load('author');
         return datatables()->of($books)
                             //nambahin author kolom
                             ->addColumn('author', function(Book $model){
@@ -43,7 +45,8 @@ class DataController extends Controller
         //untuk nampilin peminjaman dari user
         // $borrows = BorrowHistory::latest();
         //untuk nampilin hanya buku yang di pinjam dari user
-         $borrows = BorrowHistory::where('returned_at',null)->latest();
+         $borrows = BorrowHistory::where('returned_at',null)->latest()->get();
+         $borrows->load('user','book');
         return datatables()->of($borrows)
                             ->addColumn('user', function(BorrowHistory $model){
                                         return $model->user->name;

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tabel</title>
+    <title>LIBRARY REPORT
+    </title>
 </head>
 <body>
+    <h2 style="text-align: center">Report</h2>
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
@@ -33,14 +35,6 @@
                 <td>{{$book->author->name}}</td>
               </tr>
               @endforeach
-          <tr>
-            <td>{{$no++}}</td>
-            <td>{{$book->title}}</td>
-            <td>{{$book->description}}</td>
-            <td>{{$book->qty}}</td>
-            <td>{{$book->borrowed_count}}</td>
-            <td>{{$book->author->name}}</td>
-          </tr>
         </tbody>
       </table>
 </body>

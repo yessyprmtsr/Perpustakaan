@@ -30,7 +30,9 @@ class ReportController extends Controller
         ]);
     }
     public function cetak(){
-      $data = Book::withCount('borrowed')->get();
+      $data = Book::withCount('borrowed')
+            ->orderBy('borrowed_count','desc')
+            ->get();
       if(is_null($data)){
           Session::flash('flash_message',[
               'warna'=>'alert-danger',

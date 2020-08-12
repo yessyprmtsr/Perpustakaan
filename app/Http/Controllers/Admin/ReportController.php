@@ -6,6 +6,8 @@ use App\Book;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\Session;
 
 class ReportController extends Controller
 {
@@ -27,4 +29,20 @@ class ReportController extends Controller
             'users' => $users,
         ]);
     }
-}
+    public function cetak(){
+      $data = Book::withCount('borrowed')->get();
+      if(is_null($data)){
+          Session::flash('flash_message',[
+              'warna'=>'alert-danger',
+              'message'=>'Empty Data'
+          ]);
+          return redirect()->route('admin.report.top-book');
+        } else {
+            $title = "Report Library";
+            $pdf = PDF::LoadView('admin.report.cetak', compact('data'));
+            $pdf->setPaper('A4','potrait');
+            return $pdf->stream($title, array('Attachment' => false));
+        }
+      }
+    }
+

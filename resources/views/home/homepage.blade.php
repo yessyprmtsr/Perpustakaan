@@ -14,9 +14,8 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="400">
-            <h1 class="mb-4">Excellent Space For Your Next Home</h1>
-            <p class="mb-5">1105 Madison Plaza Suite 120 Chesapeake, CA, California</p>
-            <p><a href="#" class="btn btn-primary px-5 py-3">Take a Tour</a></p>
+            <h1 class="mb-4">Excellent Books For Your Knowledge</h1>
+            <p class="mb-5">Enjoy your time with our book</p>
           </div>
         </div>
       </div>
@@ -27,8 +26,12 @@
       <div class="featured-property-half d-flex">
         <div class="image" style="background-image: url('{{asset('/assetuser/images/hero_bg_1.jpg')}}')"></div>
         <div class="text">
-          <h2>Property Information</h2>
-          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae obcaecati doloribus distinctio, aliquam vero? Molestias, amet, eveniet.</p>
+          <h2>Library Information</h2>
+          <p class="mb-5">
+              <h5>Name: PUSTAKA Library</h5>
+              <h5>Year: 2020</h5>
+              <h5>Place: Ds. Bagelenan rt 1/1, Srengat-Blitar</h5>
+          </p>
           </ul>
         </div>
       </div>
@@ -187,13 +190,10 @@
 
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="mb-5">
-              <h3 class="footer-heading mb-4">Watch Live Streaming</h3>
+              <h3 class="footer-heading mb-4">Maps</h3>
 
               <div class="block-16">
-                <figure>
-                  <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid rounded">
-                  <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-button popup-vimeo"><span class="icon-play"></span></a>
-                </figure>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1-hOtSGCvNo3MKepaGlCFPeP1fC0&hl=en" width="400" height="200"></iframe>
               </div>
 
             </div>
@@ -207,7 +207,7 @@
           <div class="col-md-12">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Yessy</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>

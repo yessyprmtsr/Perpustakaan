@@ -21,7 +21,7 @@
                     document.getElementById('returnForm').action = action;
                     document.getElementById('returnForm').submit();
                     Swal.fire(
-                    'Deleted!',
+                    'Returned!',
                     'User has been return the book.',
                     'success'
                         )

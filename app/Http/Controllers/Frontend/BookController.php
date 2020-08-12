@@ -41,9 +41,9 @@ class BookController extends Controller
             'book_id' => $book->id,
         ]);
         // $user = auth()->user();
-        // $user->borrow()->attach($book);
+        // // $user->borrow()->attach($book);
 
-        //  if($user->borrow->where('books.id', $book->id)->count() > 0){
+        //  if($user->borrow()->where('books.id', $book->id)->count() > 0){
         //     return redirect()->back()->with('toast','You already borrow this book');
         // }
 
@@ -54,11 +54,11 @@ class BookController extends Controller
     //    $user->borrow()->attach($books);
     //     return 'Ok';
     }
-    public function search(Request $request){
-        $search = $request->get('search');
-        $books =  DB::table('books')->where('title','like','%'.$search.'%')->paginate(12);
-        return view('home.book',[
-            'books' => $books,
-        ]);
-    }
+    // public function search(Request $request){
+    //     $search = $request->get('search');
+    //     $books =  DB::table('books')->where('title','like','%'.$search.'%')->paginate(12);
+    //     return view('home.book',[
+    //         'books' => $books,
+    //     ]);
+    // }
 }

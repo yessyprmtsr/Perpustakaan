@@ -21,9 +21,12 @@
     </div>
   </div>
   <br>
-
+  <h1 class="text-white">Borrow History</h1>
     <div class="site-section">
     <div class="container">
+        <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+            <h2 class="mb-5">Our Books</h2>
+          </div>
       <div class="row">
         @foreach ($books as $book)
         <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
@@ -109,13 +112,10 @@
 
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="mb-5">
-              <h3 class="footer-heading mb-4">Watch Live Streaming</h3>
+              <h3 class="footer-heading mb-4">Maps</h3>
 
               <div class="block-16">
-                <figure>
-                  <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid rounded">
-                  <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-button popup-vimeo"><span class="icon-play"></span></a>
-                </figure>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1-hOtSGCvNo3MKepaGlCFPeP1fC0&hl=en" width="400" height="200"></iframe>
               </div>
 
             </div>
@@ -124,12 +124,14 @@
 
           </div>
 
+          </div>
+
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Yessy</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
